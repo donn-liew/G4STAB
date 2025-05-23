@@ -7,11 +7,11 @@ G4STAB is developed in Python 3.10.15 and uses the following modules:
  - CUDA Toolkit 11.8.0
  - Keras 3.3.3
 
-to see all modules, please see environment.yml
+For a complete list of dependencies, refer to `environment.yml`.
 
-Trained models are stored in the `trained_models` folder. All models use identical architectures and hyperparameters, trained on the same dataset but with different random shuffles of the training data
+Trained models are stored in the `trained_models` folder. All models use identical architectures and hyperparameters, trained on the same dataset but with different random shuffles of the training data.
 
-## Making Predictions
+## Making Melting Temperature Prediction
 
 **For melting temperature prediction of putative G4 sequence:**
 - Use all 5 models to make predictions
