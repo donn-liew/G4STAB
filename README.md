@@ -128,8 +128,4 @@ If you use G4STAB in your research, please cite:
 }
 ```
 
-```markdown
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
