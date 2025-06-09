@@ -101,11 +101,14 @@ def load_scalers(scalers_dir="trained_models", data_file="Dataset (G4STAB) Suppl
     scaler_salt_path = os.path.join(scalers_dir, "scaler_salt.pkl")
     scaler_ph_path = os.path.join(scalers_dir, "scaler_ph.pkl")
 
-    with open(scaler_salt_path, 'rb') as f:
-        scaler_salt = pickle.load(f)
-    with open(scaler_ph_path, 'rb') as f:
-        scaler_ph = pickle.load(f)
-    return {'scaler_salt': scaler_salt, 'scaler_ph': scaler_ph}
+    try:
+        with open(scaler_salt_path, 'rb') as f:
+            scaler_salt = pickle.load(f)
+        with open(scaler_ph_path, 'rb') as f:
+            scaler_ph = pickle.load(f)
+        return {'scaler_salt': scaler_salt, 'scaler_ph': scaler_ph}
+    except FileNotFoundError as e:
+        raise RuntimeError(f"Scalers not found: {e}. Make sure {scalers_dir}/ contains scaler_salt.pkl and scaler_ph.pkl")
 
 def seqmap(sequence, conc=False, ph=False):
     """
