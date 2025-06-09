@@ -11,17 +11,9 @@ A deep learning ensemble model for predicting G-quadruplex (G4) melting temperat
 G4STAB uses an ensemble of ten deep neural networks to predict the thermodynamic stability (melting temperature) of G-quadruplex structures. The model takes into account:
 
 - **DNA sequence**: Primary structure of the G-quadruplex forming sequence
-- **Salt concentration**: K⁺, Na⁺, and other (NH₄⁺/Li⁺) concentrations (mM)
-- **pH**: Solution pH value
+- **Salt concentration**: K⁺, Na⁺, Li⁺/NH₄⁺ concentrations (mM)
+- **pH**
 
-## Features
-
-- **Sequence-based prediction**: Analyze G4 sequences directly
-- **Multi-condition support**: Account for salt concentration and pH effects
-- **Ensemble modeling**: Uses 10 models for robust predictions
-- **Uncertainty estimation**: Provides prediction confidence intervals
-- **Command-line interface**: Easy-to-use CLI for batch processing
-- **Batch processing**: Handle multiple sequences efficiently
 
 ## Installation
 
@@ -66,10 +58,10 @@ GGGTTGGGTTGGGTTGGGT,150,100,5,7.4
 - sequence: DNA sequence containing G-quadruplex forming region
 
 ### Optional columns:
-- salt_k: Potassium concentration (mM), default: 50
-- salt_na: Sodium concentration (mM), default: 50
-- salt_other: Other salt concentration - NH₄⁺/Li⁺ (mM), default: 0
-- ph: pH value, default: 7.0
+- salt_k: K⁺ concentration (mM), default: 50
+- salt_na: Na⁺ concentration (mM), default: 50
+- salt_other: NH₄⁺/Li⁺ (mM), default: 0
+- ph: default: 7.0
 
 ## Usage
 
