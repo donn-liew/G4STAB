@@ -264,7 +264,7 @@ class G4StabPredictor:
             sequences: Single sequence string or list of sequences
             salt_concentrations: Salt concentrations [K+, Na+, (NH4+/Li+)] in mM.
                                 Single list for all sequences or list of lists for each sequence.
-                                Default: [50, 50, 0]
+                                Default: [100, 0, 0]
             ph_values: pH value(s). Single value for all sequences or list for each sequence.
                       Default: 7.0
                       
@@ -279,7 +279,7 @@ class G4StabPredictor:
         
         # Set default salt concentrations
         if salt_concentrations is None:
-            salt_concentrations = [[50.0, 50.0, 0.0]] * n_sequences
+            salt_concentrations = [[100.0, 0.0, 0.0]] * n_sequences
         elif isinstance(salt_concentrations[0], (int, float)):
             # Single salt concentration for all sequences
             salt_concentrations = [salt_concentrations] * n_sequences
@@ -364,9 +364,9 @@ Examples:
                        help='Output CSV file (default: print to stdout)')
     parser.add_argument('--models-dir', type=str, default='trained_models',
                        help='Directory containing trained models (default: trained_models)')
-    parser.add_argument('--salt', type=float, nargs=3, default=[50.0, 50.0, 0.0],
+    parser.add_argument('--salt', type=float, nargs=3, default=[100.0, 0.0, 0.0], 
                        metavar=('K+', 'Na+', 'Other'),
-                       help='Salt concentrations in mM: K+ Na+ Other(NH4+/Li+) (default: 50 50 0)')
+                       help='Salt concentrations in mM: K+ Na+ Other(NH4+/Li+) (default: 100 0 0)')
     parser.add_argument('--ph', type=float, default=7.0,
                        help='pH value (default: 7.0)')
     
