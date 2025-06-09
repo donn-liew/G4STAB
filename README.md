@@ -54,14 +54,14 @@ sequence,salt_k,salt_na,salt_other,ph
 GGGTTAGGGTTAGGGTTAGGG,50,50,0,7.0
 GGGTTGGGTTGGGTTGGGT,150,100,5,7.4
 ```
-### Required columns:
-- sequence: DNA sequence containing G-quadruplex forming region
+**Required columns:**
+- `sequence`: DNA sequence containing G-quadruplex forming region
 
-### Optional columns:
-- salt_k: K⁺ concentration (mM), default: 50
-- salt_na: Na⁺ concentration (mM), default: 50
-- salt_other: NH₄⁺/Li⁺ (mM), default: 0
-- ph: default: 7.0
+**Optional columns:**
+- `salt_k`: K⁺ concentration (mM), default: 100
+- `salt_na`: Na⁺ concentration (mM), default: 0   
+- `salt_other`: NH₄⁺/Li⁺ (mM), default: 0
+- `ph`: default: 7.0
 
 ## Usage
 
