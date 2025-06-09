@@ -33,9 +33,11 @@ G4STAB uses an ensemble of ten deep neural networks to predict the thermodynamic
 ### Using Conda (Recommended)
 
 ```bash
+# Clone the repository
 git clone https://github.com/yourusername/g4stab.git
 cd g4stab
 
+# Create conda environment from file
 conda env create -f environment.yml
 conda activate tf
 ```
@@ -43,6 +45,7 @@ conda activate tf
 ### Using pip
 
 ```bash
+# Clone the repository
 git clone https://github.com/yourusername/g4stab.git
 cd g4stab
 
@@ -124,8 +127,6 @@ If you use G4STAB in your research, please cite:
   doi={10.xxxx/xxxxx}
 }
 ```
-
-## Step 8: License Section
 
 ```markdown
 ## License
