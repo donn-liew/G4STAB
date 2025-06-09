@@ -1,6 +1,10 @@
-# G4STAB
+# G4STAB: G-quadruplex Thermodynamic Stability Predictor
 
-A multi-input deep learning model to predict G-quadruplex (G4) thermodynamic stability based on sequence and salt concentration.
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![TensorFlow 2.16.1](https://img.shields.io/badge/tensorflow-2.16.1-orange.svg)](https://tensorflow.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A deep learning ensemble model for predicting G-quadruplex (G4) melting temperatures based on DNA sequence, salt concentration, and pH conditions.
 
 G4STAB is developed in Python 3.10.15 and uses the following modules:
  - TensorFlow 2.16.1
