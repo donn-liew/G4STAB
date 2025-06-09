@@ -5,7 +5,7 @@ A tool for predicting G-quadruplex (G4) melting temperatures based on sequence,
 salt concentration, and pH using ensemble deep learning models.
 """
 
-import os, sys, argparse, warnings, re, itertools, collections
+import os, sys, argparse, warnings, re, itertools, collections, pickle
 from pathlib import Path
 from typing import List, Tuple, Optional, Union
 import numpy as np
