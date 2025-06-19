@@ -20,7 +20,7 @@ G4STAB uses an ensemble of ten deep neural networks to predict the thermodynamic
 ### Prerequisites
 
 - Python 3.10 or higher
-- CUDA 11.8.0 (for GPU acceleration, optional)
+- GPU with CUDA support (optional, for acceleration)
 
 ### Using Conda (Recommended)
 
