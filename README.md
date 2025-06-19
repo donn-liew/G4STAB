@@ -31,7 +31,7 @@ cd g4stab
 
 # Create conda environment from file
 conda env create -f environment.yml
-conda activate tf
+conda activate g4stab_env
 ```
 
 ### Using pip
