@@ -24,6 +24,18 @@ except ImportError as e:
     print(f"Error: Required packages missing. Install with: pip install tensorflow==2.16.1 scikit-learn")
     sys.exit(1)
 
+@tf.keras.saving.register_keras_serializable()
+class CastFloat32(tf.keras.layers.Layer):
+    def __init__(self, name=None, **kwargs):
+        super().__init__(name=name, **kwargs)
+        
+    def call(self, inputs):
+        return tf.cast(inputs, tf.float32)
+        
+    def get_config(self):
+        config = super().get_config()
+        return config
+        
 def oneHot(list_of_strings, max_sequence=0, verbose=False):
     """One-hot encode DNA sequences."""
     def efficient_padding(matrix, max_sequence):
