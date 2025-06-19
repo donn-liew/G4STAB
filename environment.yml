@@ -1,4 +1,4 @@
-name: tf
+name: g4stab
 channels:
   - defaults
   - conda-forge
