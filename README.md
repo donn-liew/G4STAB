@@ -47,7 +47,7 @@ pip install tensorflow==2.16.1 pandas numpy matplotlib tqdm scikit-learn
 
 ### Input File Format
 
-For batch processing, prepare a CSV file with the following columns:
+For batch processing, create a CSV file (e.g., `input_sequences.csv`) with the following columns:
 
 ```csv
 sequence,salt_k,salt_na,salt_other,ph
