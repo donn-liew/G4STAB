@@ -1,4 +1,4 @@
-name: g4stab
+name: g4stab_env
 channels:
   - defaults
   - conda-forge
