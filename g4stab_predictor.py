@@ -14,17 +14,19 @@ from tqdm import tqdm
 
 # Suppress TensorFlow warnings
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-warnings.filterwarnings('ignore')
 
 try:
     import tensorflow as tf
+    warnings.filterwarnings('ignore')
+    tf.get_logger().setLevel('ERROR') 
+    import keras.saving
     from tensorflow.keras.models import load_model
     from sklearn.preprocessing import MinMaxScaler
 except ImportError as e:
     print(f"Error: Required packages missing. Install with: pip install tensorflow==2.16.1 scikit-learn")
     sys.exit(1)
 
-@tf.keras.utils.register_keras_serializable()
+@keras.saving.register_keras_serializable()
 class CastFloat32(tf.keras.layers.Layer):
     def __init__(self, name=None, **kwargs):
         super().__init__(name=name, **kwargs)
@@ -185,9 +187,11 @@ class G4StabPredictor:
         
         print(f"Loading {len(model_files)} models...")
         
+        custom_objects = {'CastFloat32': CastFloat32}
+        
         for model_file in sorted(model_files):
             try:
-                model = load_model(model_file, compile=False)
+                model = load_model(model_file, custom_objects=custom_objects, compile=False)
                 self.models.append(model)
                 self.model_names.append(model_file.stem)
                 print(f"  ✓ Loaded {model_file.name}")
@@ -425,7 +429,9 @@ Examples:
             results.to_csv(args.output, index=False)
             print(f"Results saved to {args.output}")
         else:
-            print(results.to_string(index=False))
+            print("\nPrediction Results:")
+            print("=" * 40)
+            print(results.T.to_string())
             
     except Exception as e:
         print(f"Error: {e}")
