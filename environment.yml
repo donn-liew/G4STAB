@@ -433,4 +433,3 @@ dependencies:
       - tensorflow-text==2.16.1
       - termcolor==2.4.0
       - werkzeug==3.0.4
-prefix: /home/donn/.conda/envs/tf
