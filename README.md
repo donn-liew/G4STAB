@@ -38,7 +38,7 @@ conda activate g4stab_env
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/g4stab.git
+git clone https://github.com/donn-liew/G4STAB.git
 cd G4STAB
 
 # Install dependencies
