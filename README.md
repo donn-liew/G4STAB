@@ -4,7 +4,7 @@
 [![TensorFlow 2.16.1](https://img.shields.io/badge/tensorflow-2.16.1-orange.svg)](https://tensorflow.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A deep learning ensemble model for predicting G-quadruplex (G4) melting temperatures based on DNA sequence, salt concentration, and pH conditions.
+A deep learning ensemble model for predicting G-quadruplex (G4) melting temperatures based on DNA sequence, salt concentration, and pH. Alternatively, see [G4STAB Web Database](https://donn-liew.github.io/g4stab-web-database/).
 
 ## Overview
 
