@@ -24,7 +24,7 @@ except ImportError as e:
     print(f"Error: Required packages missing. Install with: pip install tensorflow==2.16.1 scikit-learn")
     sys.exit(1)
 
-@tf.keras.saving.register_keras_serializable()
+@tf.keras.utils.register_keras_serializable()
 class CastFloat32(tf.keras.layers.Layer):
     def __init__(self, name=None, **kwargs):
         super().__init__(name=name, **kwargs)
