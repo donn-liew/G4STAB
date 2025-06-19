@@ -218,7 +218,7 @@ class G4StabPredictor:
             X_ohe, X_kmer, X_salt, X_ph = seqmap(sequences, salt_concentrations, ph_values)
             return [X_ohe, X_kmer, X_salt, X_ph]
         except Exception as e:
-            raise RuntimeError(f"Feature engineering failed: {e}. Make sure 'v3 G4 Library.xlsx' is available for scaler loading.")
+            raise RuntimeError(f"Feature engineering failed: {e}. Make sure 'Dataset (G4STAB) Supplementary Table 1.csv' is available for scaler loading.")
     
     def _create_model_inputs(self, model, features: List[np.ndarray]) -> dict:
         """
