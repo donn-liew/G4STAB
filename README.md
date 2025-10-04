@@ -111,12 +111,13 @@ print(results[['sequence', 'ensemble_mean', 'ensemble_std']])
 If you use G4STAB in your research, please cite:
 
 ```bibtex
-@article{ID,
-  title={G4STAB: Deep Learning Prediction of G-quadruplex Thermodynamic Stability},
-  author={},
-  journal={},
+@article{liew2025g4stab,
+  title={G4STAB: A multi-input deep learning model to predict G-quadruplex thermodynamic stability based on sequence and salt concentration},
+  author={Liew, Donn and Dharmatilleke, Akesha Dinuli and See, Edwin and Yong, Ee Hou},
+  journal={Bioinformatics},
+  pages={btaf545},
   year={2025},
-  doi={}
+  publisher={Oxford University Press}
 }
 ```
 
